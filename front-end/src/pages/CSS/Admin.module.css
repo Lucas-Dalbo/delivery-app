@@ -3,20 +3,20 @@
 }
 
 .adminForm {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0 30rem;
 }
 
 .adminForm label {
+  font-weight: 700;
   margin-bottom: 1rem;
-  font-weight: bold;
 }
 
 .adminForm input {
+  font-weight: 700;
   margin-top: 1rem;
-  font-weight: bold;
 }
 
 .adminForm select {
@@ -24,25 +24,25 @@
 }
 
 .adminForm button {
-  height: 2rem;
-  width: 10rem;
-  margin-top: 1rem;
-  
-  cursor: pointer;
+  background-color: var(--gray-900);
   border: none;
   border-radius: 6px;
-  
-  background-color: var(--gray-900);
   color: var(--white);
+  cursor: pointer;
+  height: 2rem;
+  margin-top: 1rem;
+  width: 10rem;
 }
 
 .adminForm button:disabled {
-  cursor: not-allowed;
   background-color: var(--gray-700);
+  cursor: not-allowed;
 }
 
-@media (min-width: 1500px) {
+@media ( min-width : 1500px ) {
+
   .adminForm {
     padding: 0 70rem;
   }
+
 }

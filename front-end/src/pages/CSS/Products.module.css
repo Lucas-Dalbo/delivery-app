@@ -1,9 +1,9 @@
 .productsContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 60vh;
+  justify-content: space-between;
 }
 
 .slider {
@@ -11,20 +11,14 @@
   width: 60rem;
 }
 
-
-
-.cartButton{
+.cartButton {
+  background-color: var(--gray-900);
   border: none;
   border-radius: 10px;
-
-  height: 3rem;
-  width: 20rem;
-
-  background-color: var(--gray-900);
   color: var(--white);
-
   cursor: pointer;
-
-  font-weight: bold;
+  font-weight: 700;
+  height: 3rem;
   letter-spacing: 1px;
+  width: 20rem;
 }

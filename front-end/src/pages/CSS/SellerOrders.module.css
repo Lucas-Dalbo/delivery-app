@@ -1,20 +1,17 @@
 .orderContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
-.orderContainer div{
-  margin: 1rem 0;
-  /* border: solid red 1px; */
-  width: 30rem;
-
+.orderContainer div {
   background-color: var(--golden-600);
-  color: var(--gray-900);
   border: none;
   border-radius: 8px;
-
+  color: var(--gray-900);
+  margin: 1rem 0;
+  width: 30rem;
 }
 
 .orderContainer section {
