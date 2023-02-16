@@ -29,8 +29,8 @@ O banco de dados utilizado foi o **MySQL**, um banco relacional, estruturado da 
 
 Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
 
-### **Endpoints**
-### POST /login :
+### Endpoints
+#### POST /login :
  - Responsável pelo login de usuários cadastrados.
 
     Entrada:
@@ -52,7 +52,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /register :
+#### POST /register :
   - Responsável por registrar novos usuários, realizando a validação das informações. A senha é codificada usando **md5**, antes de salavr no banco de dados.
 
     Entrada:
@@ -75,7 +75,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /admin/register :
+#### POST /admin/register :
   - Similar a *user/register*, porém o cadastro é ralizado por uma pessoa admin.
 
     Entrada:
@@ -101,7 +101,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### GET /sellers :
+#### GET /sellers :
   - Retorna todas as pessoas usuárias cadastradas como vendedoras.
 
     Saida:
@@ -112,7 +112,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /sales :
+#### POST /sales :
   - Rsponsavel por registrar novas vendas.
 
     Entrada:
@@ -136,7 +136,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### GET /sales?id :
+#### GET /sales?id :
   - Retorna uma lista das compras referentes ao id pessoa usuária.
 
     Entrada:
@@ -150,7 +150,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     ["Lista de objetos, cada objeto é uma compra"]
     ```
 
-### GET /sales/:id :
+#### GET /sales/:id :
   - Retorna a venda referente ao id informado.
 
     Entrada:
@@ -175,7 +175,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       }
     ```
 
-### GET /seller/orders :
+#### GET /seller/orders :
   - Retorna as vendas referentes a um vendedor especifico:
 
     Entrada:
@@ -189,7 +189,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     ["Lista de objetos, cada objeto é uma venda"]
     ```
 
-### PATCH /sales/:id :
+#### PATCH /sales/:id :
   - Responsável por alterar o status de um pedido
 
     Entrada:
@@ -208,7 +208,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       }
     ```
 
-### GET /products e GET /customer/products :
+#### GET /products e GET /customer/products :
   - Retorna uma todos os produtos registrados no banco.
 
       Saida:
@@ -225,7 +225,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     ]
     ```
 
-### **O que foi utilizado**
+#### **O que foi utilizado**
   - Node.js, Express, Sequelize;
   - Md5, JsonWebToken, Cors;
   - Mysql2;
