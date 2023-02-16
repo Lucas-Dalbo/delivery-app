@@ -2,32 +2,40 @@
 Esta é uma aplicação Full-Stack que gerência pedidos e entregas de bebidas, desenvolvida por meu grupo e eu, durante o curso de Desenvolvimento Web Full-Stack da [Trybe](https://www.betrybe.com/).
 
 ---
-## Banco de Dados
-<details>
-<summary></summary>
+## Front-End
+Desenvolvido com a biblioteca **React.js**.
 
-O banco de dados utilizado foi o **MySQL**, um banco relacional, estruturado da seguinte forma:
+### O que foi utilizado
+  - React, ContextAPI;
+  - CSS3, Slick Carousel;
+  - React-Router-Dom, Axios;
 
-![Tabelas do Banco de Dados](./bd.png "Tabelas do Banco de Dados")
-
-### **Tabelas**
-  - **users**:
-    - Armazena os dados das pessoas usuárias, tanto compradores quanto vendedores.
-  - **sales**:
-    - Armazena as informações referentes as vendas, quem comprou, quem vendeu, onde foi entregue, a data da compra e o valor total.
-  - **sales_products**:
-    - Tabela intermediária para a relação N:N entre vendas e produtos, também armazena a quantidade vendida do produto.
-  - **products**:
-    - Armazena as informações referentes aos produtos, como nome, preço e sua imagem.
-
-</details>
+### Video Apresentação
+<video src="./apresentacao_app_delivery.mp4" controls="controls" style="max-width: 520px;">
+</video>
 
 ---
 ## Back-End
-<details>
-<summary></summary>
-
 Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
+
+### O que foi utilizado
+  - Node.js, Express, Sequelize;
+  - Md5, JsonWebToken, Cors;
+  - Mysql2;
+  - Mocha, Chai, Chai-http, Sinon.
+
+### Funcionalidades
+  - Login;
+  - Registro de novos usuários;
+  - Relatório de usuários vendedores;
+  - Registro de novos pedidos;
+  - Relatório de uma venda/compra especifica.
+  - Relatório de vendas/compras realizadas;
+  - Alteração de status da compra/venda;
+  - Relatório de produtos disponiveis. 
+
+<details>
+<summary> <b>Sainda mais sobre os Endpoints!</b> </summary>
 
 ### Endpoints
 #### POST /login :
@@ -224,26 +232,26 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       ...,
     ]
     ```
-
-#### **O que foi utilizado**
-  - Node.js, Express, Sequelize;
-  - Md5, JsonWebToken, Cors;
-  - Mysql2;
-  - Mocha, Chai, Chai-http, Sinon;
-
 </details>
 
 ---
-## Front-End
+## Banco de Dados
+O banco de dados utilizado foi o **MySQL**, um banco relacional, estruturado da seguinte forma:
+
+![Tabelas do Banco de Dados](./bd.png "Tabelas do Banco de Dados")
+
 <details>
-<summary></summary>
+<summary>Saiba mais sobre as Tabelas!</b></summary>
 
-Desenvolvido em **React.js**.
-
-### **O que foi utilizado**
-  - React, ContextAPI;
-  - CSS3, Slick Carousel;
-  - React-Router-Dom, Axios;
+### **Tabelas**
+  - **users**:
+    - Armazena os dados das pessoas usuárias, tanto compradores quanto vendedores.
+  - **sales**:
+    - Armazena as informações referentes as vendas, quem comprou, quem vendeu, onde foi entregue, a data da compra e o valor total.
+  - **sales_products**:
+    - Tabela intermediária para a relação N:N entre vendas e produtos, também armazena a quantidade vendida do produto.
+  - **products**:
+    - Armazena as informações referentes aos produtos, como nome, preço e sua imagem.
 
 </details>
 
