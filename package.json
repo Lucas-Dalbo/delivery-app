@@ -6,6 +6,8 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "back": "cd back-end/ && npm start",
+    "front": "cd front-end/ && npm start",
     "pm2": "./node_modules/.bin/pm2",
     "jest": "./node_modules/.bin/jest",
     "start": "./scripts/prepare-for-test.sh",

@@ -2,35 +2,43 @@
 Esta é uma aplicação Full-Stack que gerência pedidos e entregas de bebidas, desenvolvida por meu grupo e eu, durante o curso de Desenvolvimento Web Full-Stack da [Trybe](https://www.betrybe.com/).
 
 ---
-## Banco de Dados
-<details>
-<summary></summary>
+## Front-End
+Desenvolvido com a biblioteca **React.js**.
 
-O banco de dados utilizado foi o **MySQL**, um banco relacional, estruturado da seguinte forma:
+### O que foi utilizado
+  - React, ContextAPI;
+  - CSS3, Slick Carousel;
+  - React-Router-Dom, Axios;
 
-![Tabelas do Banco de Dados](./bd.png "Tabelas do Banco de Dados")
-
-### **Tabelas**
-  - **users**:
-    - Armazena os dados das pessoas usuárias, tanto compradores quanto vendedores.
-  - **sales**:
-    - Armazena as informações referentes as vendas, quem comprou, quem vendeu, onde foi entregue, a data da compra e o valor total.
-  - **sales_products**:
-    - Tabela intermediária para a relação N:N entre vendas e produtos, também armazena a quantidade vendida do produto.
-  - **products**:
-    - Armazena as informações referentes aos produtos, como nome, preço e sua imagem.
-
-</details>
+### Video Apresentação
+<video src="./apresentacao_app_delivery.mp4" controls="controls" style="max-width: 520px;">
+</video>
 
 ---
 ## Back-End
-<details>
-<summary></summary>
-
 Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
 
-### **Endpoints**
-### POST /login :
+### O que foi utilizado
+  - Node.js, Express, Sequelize;
+  - Md5, JsonWebToken, Cors;
+  - Mysql2;
+  - Mocha, Chai, Chai-http, Sinon.
+
+### Funcionalidades
+  - Login;
+  - Registro de novos usuários;
+  - Relatório de usuários vendedores;
+  - Registro de novos pedidos;
+  - Relatório de uma venda/compra especifica.
+  - Relatório de vendas/compras realizadas;
+  - Alteração de status da compra/venda;
+  - Relatório de produtos disponiveis. 
+
+<details>
+<summary> <b>Sainda mais sobre os Endpoints!</b> </summary>
+
+### Endpoints
+#### POST /login :
  - Responsável pelo login de usuários cadastrados.
 
     Entrada:
@@ -52,7 +60,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /register :
+#### POST /register :
   - Responsável por registrar novos usuários, realizando a validação das informações. A senha é codificada usando **md5**, antes de salavr no banco de dados.
 
     Entrada:
@@ -75,7 +83,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /admin/register :
+#### POST /admin/register :
   - Similar a *user/register*, porém o cadastro é ralizado por uma pessoa admin.
 
     Entrada:
@@ -101,7 +109,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### GET /sellers :
+#### GET /sellers :
   - Retorna todas as pessoas usuárias cadastradas como vendedoras.
 
     Saida:
@@ -112,7 +120,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### POST /sales :
+#### POST /sales :
   - Rsponsavel por registrar novas vendas.
 
     Entrada:
@@ -136,7 +144,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     }
     ```
 
-### GET /sales?id :
+#### GET /sales?id :
   - Retorna uma lista das compras referentes ao id pessoa usuária.
 
     Entrada:
@@ -150,7 +158,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     ["Lista de objetos, cada objeto é uma compra"]
     ```
 
-### GET /sales/:id :
+#### GET /sales/:id :
   - Retorna a venda referente ao id informado.
 
     Entrada:
@@ -175,7 +183,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       }
     ```
 
-### GET /seller/orders :
+#### GET /seller/orders :
   - Retorna as vendas referentes a um vendedor especifico:
 
     Entrada:
@@ -189,7 +197,7 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
     ["Lista de objetos, cada objeto é uma venda"]
     ```
 
-### PATCH /sales/:id :
+#### PATCH /sales/:id :
   - Responsável por alterar o status de um pedido
 
     Entrada:
@@ -208,25 +216,42 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       }
     ```
 
-### **O que foi utilizado**
-  - Node.js, Express, Sequelize;
-  - Md5, JsonWebToken, Cors;
-  - Mysql2;
-  - Mocha, Chai, Chai-http, Sinon;
+#### GET /products e GET /customer/products :
+  - Retorna uma todos os produtos registrados no banco.
 
+      Saida:
+    ```json
+    [
+      ...,
+      {
+        "id": "number",
+        "name": "string",
+        "price": "decimal",
+        "urlImage": "string",
+      },
+      ...,
+    ]
+    ```
 </details>
 
 ---
-## Front-End
+## Banco de Dados
+O banco de dados utilizado foi o **MySQL**, um banco relacional, estruturado da seguinte forma:
+
+![Tabelas do Banco de Dados](./bd.png "Tabelas do Banco de Dados")
+
 <details>
-<summary></summary>
+<summary>Saiba mais sobre as Tabelas!</b></summary>
 
-Desenvolvido em **React.js**.
-
-### **O que foi utilizado**
-  - React, ContextAPI;
-  - CSS3, Slick Carousel;
-  - React-Router-Dom, Axios;
+### **Tabelas**
+  - **users**:
+    - Armazena os dados das pessoas usuárias, tanto compradores quanto vendedores.
+  - **sales**:
+    - Armazena as informações referentes as vendas, quem comprou, quem vendeu, onde foi entregue, a data da compra e o valor total.
+  - **sales_products**:
+    - Tabela intermediária para a relação N:N entre vendas e produtos, também armazena a quantidade vendida do produto.
+  - **products**:
+    - Armazena as informações referentes aos produtos, como nome, preço e sua imagem.
 
 </details>
 
