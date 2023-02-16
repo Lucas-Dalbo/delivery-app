@@ -208,6 +208,23 @@ Desenvolvido em **Node.js**, utilizando **Express** com **Sequelize**.
       }
     ```
 
+### GET /products e GET /customer/products :
+  - Retorna uma todos os produtos registrados no banco.
+
+      Saida:
+    ```json
+    [
+      ...,
+      {
+        "id": "number",
+        "name": "string",
+        "price": "decimal",
+        "urlImage": "string",
+      },
+      ...,
+    ]
+    ```
+
 ### **O que foi utilizado**
   - Node.js, Express, Sequelize;
   - Md5, JsonWebToken, Cors;
