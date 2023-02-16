@@ -11,8 +11,7 @@ Desenvolvido com a biblioteca **React.js**.
   - React-Router-Dom, Axios;
 
 ### Video Apresentação
-<video src="./apresentacao_app_delivery.mp4" controls="controls" style="max-width: 520px;">
-</video>
+https://user-images.githubusercontent.com/98189891/219373739-05ae8ff1-8e53-4b1f-9362-1404bc02ec9b.mp4
 
 ---
 ## Back-End
